@@ -1,0 +1,23 @@
+@use '../abstracts/colors' as c;
+@use '../abstracts/mixins' as m;
+@use '../abstracts/fonts' as f;
+
+.btn {
+  min-width: 100px;
+  min-height: 40px;
+  background-color: transparent;
+  border-radius: 50px;
+  color: c.$white;
+  font-size: f.$font-size;
+  cursor: pointer;
+  transition: 0.15s;
+  @include m.focus();
+  border: 3px solid c.$white;
+  padding: 5px 20px;
+
+  &:hover,
+  &:focus {
+    background-color: c.$white;
+    color: c.$black;
+  }
+}

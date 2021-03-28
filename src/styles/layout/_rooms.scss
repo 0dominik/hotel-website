@@ -1,0 +1,90 @@
+@use '../abstracts/colors' as c;
+@use '../abstracts/fonts' as f;
+@use '../abstracts/mixins' as m;
+
+.rooms {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.room {
+  position: relative;
+  margin-top: 60px;
+  background-position: 50% 50%;
+
+  &:nth-child(odd) {
+    .room-card {
+      right: 5%;
+      left: auto;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 1200px;
+    border: 2px solid c.$black;
+  }
+
+  @include m.mq('small') {
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+  @include m.mq('large') {
+    .room__img {
+      border: none;
+      border-top: 2px solid c.$black;
+      border-bottom: 2px solid c.$black;
+    }
+  }
+}
+
+.room-card {
+  background-color: c.$white;
+  padding: 20px 15px;
+  position: absolute;
+  top: -50px;
+  left: 5%;
+  border: 2px solid black;
+  @include m.flex(center, center, column);
+
+  &__title {
+    font-size: f.$subheading-size;
+    font-weight: f.$medium;
+    @include m.heading-decoration();
+  }
+
+  &__desc {
+    margin-top: 10px;
+    max-width: 50ch;
+    text-align: justify;
+  }
+
+  &__icon-group {
+    @include m.flex(center, auto);
+    flex-wrap: wrap;
+  }
+
+  &__icon-wrapper {
+    @include m.flex(flex-start, center, column);
+    text-align: center;
+    width: 100px;
+    margin-top: 20px;
+  }
+
+  &__icon {
+    max-width: 50px;
+    margin-bottom: 10px;
+  }
+
+  &__price {
+    font-weight: f.$bold;
+    margin-top: 20px;
+  }
+
+  @include m.mq('small') {
+    position: static;
+    border: none;
+    border-top: 2px solid c.$black;
+  }
+}

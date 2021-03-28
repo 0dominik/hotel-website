@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website of hotel located in Kitzbühel.">
+  <link rel="shortcut icon" href="./assets/icons/favicon.ico"
+    type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="./assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="./assets/icons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="./assets/icons/apple-touch-icon.png">
+  <link rel="preload" href="./assets/photos/header_1920.jpg" as="image">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.scss">
+  <script src="./scripts/main.js" defer></script>
+  <title>Kitzbühel hotel</title>
+</head>
+
+<body>
+  <header class="hero">
+    <nav class="navigation">
+      <a class="logo" href="#" title="Go to top">
+        <span class="logo__text">Kitzbühel</span>
+        <img class="logo__img" src="./assets/photos/logo.png" alt="Go to top">
+      </a>
+      <button type="button" class="hamburger" aria-expanded='false'>
+        <span class="visually-hidden">Open/close menu</span>
+        <span class="hamburger__bar"></span>
+      </button>
+      <ul class="menu">
+        <li class="menu__el"><a href="#about">about us</a></li>
+        <li class="menu__el"><a href="#why-us">why us</a></li>
+        <li class="menu__el"><a href="#gallery">gallery</a></li>
+        <li class="menu__el"><a href="#opinions">opinions</a></li>
+        <li class="menu__el"><a href="#rooms">rooms</a></li>
+        <li class="menu__el"><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero__heading">
+      <h1 class="hero__heading__text">welcome to kitzbühel hotel</h1>
+    </div>
+    <form class="availability">
+      <div class="availability__inputs">
+        <label class="input-label" for="availability__guests">
+          Guests:
+          <select id="availability__guests" class="input">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </label>
+        <label class="input-label" for="availability__days">
+          Days:
+          <input type="number" id="availability__days"
+            class="input input--small" value="7" min="1" max="30">
+        </label>
+        <label class="input-label" for="availability__date">
+          Arrival date:
+          <input type="date" id="availability__date" class="input">
+        </label>
+      </div>
+      <button type="submit" class="btn">Check availability</button>
+    </form>
+    <p>or</p>
+    <a href="#about" class="btn learn-more">Learn more</a>
+  </header>
+  <main>
+    <section class="section" id="about">
+      <h2 class="section__heading">About us</h2>
+      <div class="about-item">
+        <h3 class="about-item__heading">Long tradition</h3>
+        <div class="about-item__subcontainer">
+          <img src="./assets/photos/hotel.jpg"
+            alt="snowy mountains and building" class="about-item__img">
+          <p class="about-item__desc">Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Perspiciatis velit exercitationem minus, optio
+            blanditiis esse ipsum doloribus ducimus sunt enim libero soluta
+            assumenda quis quisquam nam, voluptate magni, qui quod?
+            Cumque aliquam eveniet, sit laborum quaerat magnam incidunt corporis
+            eum fuga! Quas ipsum maxime ut tempora itaque, provident cum
+            exercitationem
+            adipisci doloribus pariatur, molestiae tenetur asperiores,
+            reiciendis
+            eius nisi iusto?
+          </p>
+        </div>
+      </div>
+      <div class="about-item">
+        <h3 class="about-item__heading">Trails</h3>
+        <div class="about-item__subcontainer">
+          <img src="./assets/photos/mountain-trail.jpg"
+            alt="man on mountain trail" class="about-item__img">
+          <p class="about-item__desc">Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Perspiciatis velit exercitationem minus, optio
+            blanditiis esse ipsum doloribus ducimus sunt enim libero soluta
+            assumenda quis quisquam nam, voluptate magni, qui quod?
+            Cumque aliquam eveniet, sit laborum quaerat magnam incidunt corporis
+            eum
+            fuga! Quas ipsum maxime ut tempora itaque, provident cum
+            exercitationem
+            adipisci doloribus pariatur, molestiae tenetur asperiores,
+            reiciendis
+            eius nisi iusto?</p>
+        </div>
+      </div>
+      <div class="about-item">
+        <h3 class="about-item__heading">Restaurant</h3>
+        <div class="about-item__subcontainer">
+          <img src="./assets/photos/food.jpg"
+            alt="eggs on the white plate, coffee" class="about-item__img">
+          <p class="about-item__desc">Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Perspiciatis velit exercitationem minus, optio
+            blanditiis esse ipsum doloribus ducimus sunt enim libero soluta
+            assumenda quis quisquam nam, voluptate magni, qui quod?
+            Cumque aliquam eveniet, sit laborum quaerat magnam incidunt corporis
+            eum
+            fuga! Quas ipsum maxime ut tempora itaque, provident cum
+            exercitationem
+            adipisci doloribus pariatur, molestiae tenetur asperiores,
+            reiciendis
+            eius nisi iusto?</p>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="why-us">
+      <h2 class="section__heading">Why us?</h2>
+      <div class="cards-group">
+        <div class="card">
+          <img src="./assets/icons/restaurant.svg" alt="plate cover on the hand"
+            class="card__icon">
+          <h3 class="card__title">Local food</h3>
+          <p class="card__desc">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Nisi atque quod consectetur voluptatum neque
+            ducimus
+            tempora, voluptate aliquam porro velit ex cumque.
+          </p>
+        </div>
+        <div class="card">
+          <img src="./assets/icons/trails.svg" alt="mountain trail"
+            class="card__icon">
+          <h3 class="card__title">Attractive trails</h3>
+          <p class="card__desc">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Nisi atque quod consectetur voluptatum neque
+            ducimus
+            tempora, voluptate aliquam porro velit ex cumque.
+          </p>
+        </div>
+        <div class="card">
+          <img src="./assets/icons/bike.svg" alt="bike" class="card__icon">
+          <h3 class="card__title">Bike friendly</h3>
+          <p class="card__desc">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Nisi atque quod consectetur voluptatum neque
+            ducimus
+            tempora, voluptate aliquam porro velit ex cumque.</p>
+        </div>
+        <div class="card">
+          <img src="./assets/icons/parking.svg" alt="car and parking sign"
+            class="card__icon">
+          <h3 class="card__title">Free parking</h3>
+          <p class="card__desc">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Nisi atque quod consectetur voluptatum neque
+            ducimus
+            tempora, voluptate aliquam porro velit ex cumque.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="gallery">
+      <h2 class="section__heading">Gallery</h2>
+      <div class="modal">
+        <div class="modal__subcontainer">
+          <button class="modal__prev">
+            <span class="visually-hidden">previous image</span>
+            <span class="modal__icon" aria-hidden="true">&#60;</span>
+          </button>
+          <img src="#" alt="" class="modal__img">
+          <button class="modal__next">
+            <span class="visually-hidden">next image</span>
+            <span class="modal__icon" aria-hidden="true">&#62;</span>
+          </button>
+          <button class="modal__close">
+            <span aria-hidden="true">✕</span>
+            <span class="visually-hidden">close modal</span>
+          </button>
+        </div>
+        <p class="modal__caption"></p>
+      </div>
+      <div class="gallery">
+        <div class="gallery__item">
+          <button type="button" class="gallery__enlarge-btn">
+            <span class="visually-hidden">Enlarge</span>
+            <svg class="gallery__enlarge-icon" aria-hidden="true">
+              <use href="assets/icons/sprites.svg#magnifying-glass"></use>
+            </svg>
+          </button>
+          <img loading="lazy" src="./assets/photos/gallery-photo1.jpg"
+            alt="Mountains, forest and lake" class="gallery__img">
+        </div>
+        <div class="gallery__item">
+          <button type="button" class="gallery__enlarge-btn">
+            <span class="visually-hidden">Enlarge</span>
+            <svg class="gallery__enlarge-icon" aria-hidden="true">
+              <use href="assets/icons/sprites.svg#magnifying-glass"></use>
+            </svg>
+          </button>
+          <img loading="lazy" src="./assets/photos/gallery-photo2.jpg"
+            alt="Mountain lake" class="gallery__img">
+        </div>
+        <div class="gallery__item">
+          <button type="button" class="gallery__enlarge-btn">
+            <span class="visually-hidden">Enlarge</span>
+            <svg class="gallery__enlarge-icon" aria-hidden="true">
+              <use href="assets/icons/sprites.svg#magnifying-glass"></use>
+            </svg>
+          </button>
+          <img loading="lazy" src="./assets/photos/gallery-photo3.jpg"
+            alt="Hotel by the lake, forest" class="gallery__img">
+        </div>
+        <div class="gallery__item">
+          <button type="button" class="gallery__enlarge-btn">
+            <span class="visually-hidden">Enlarge</span>
+            <svg class="gallery__enlarge-icon" aria-hidden="true">
+              <use href="assets/icons/sprites.svg#magnifying-glass"></use>
+            </svg>
+          </button>
+          <img loading="lazy" src="./assets/photos/gallery-photo4.jpg"
+            alt="Mountain, building and trees" class="gallery__img">
+        </div>
+        <div class="gallery__item">
+          <button type="button" class="gallery__enlarge-btn">
+            <span class="visually-hidden">Enlarge</span>
+            <svg class="gallery__enlarge-icon" aria-hidden="true">
+              <use href="assets/icons/sprites.svg#magnifying-glass"></use>
+            </svg>
+          </button>
+          <img loading="lazy" src="./assets/photos/gallery-photo5.jpg"
+            alt="Mountains and buildings" class="gallery__img">
+        </div>
+        <div class="gallery__item">
+          <button type="button" class="gallery__enlarge-btn">
+            <span class="visually-hidden">Enlarge</span>
+            <svg class="gallery__enlarge-icon" aria-hidden="true">
+              <use href="assets/icons/sprites.svg#magnifying-glass"></use>
+            </svg>
+          </button>
+          <img loading="lazy" src="./assets/photos/gallery-photo6.jpg"
+            alt="Chef in restaurant kitchen" class="gallery__img">
+        </div>
+      </div>
+    </section>
+    <section class="section opinions" id="opinions">
+      <h2 class="section__heading">Opinions</h2>
+      <div class="opinion">
+        <figure class="opinion__customer">
+          <img loading="lazy" src="./assets/photos/person1.jpg"
+            alt="man with glasses" class="opinion__customer__img">
+          <figcaption class="opinion__customer__name">John Paul</figcaption>
+        </figure>
+        <div class="opinion__body">
+          <img src="./assets/icons/quote.png" alt=""
+            class="opinion__quote-mark">
+          <h3 class="opinion__title">Savory food</h3>
+          <p class="opinion__date">
+            Published at:
+            <time datetime="2021-01-01T15:21">2021.01.01
+              15:21</time>
+          </p>
+          <p class="opinion__content">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
+            reiciendis tenetur nobis, natus aut eaque nihil ratione. Magnam
+            beatae
+            eius saepe? Expedita facere dolore voluptas deleniti blanditiis quos
+            suscipit cupiditate.
+          </p>
+        </div>
+        <div class="opinion__rate">
+          <h4 class="opinion__rate__heading">rate</h4>
+          <div class="opinion__rate__star-group" aria-hidden="true">
+            <svg class="opinion__rate__star opinion__rate__star--filled">
+              <use href="assets/icons/sprites.svg#star"></use>
+            </svg>
+            <svg class="opinion__rate__star opinion__rate__star--filled">
+              <use href="assets/icons/sprites.svg#star"></use>
+            </svg>
+            <svg class="opinion__rate__star opinion__rate__star--filled">
+              <use href="assets/icons/sprites.svg#star"></use>
+            </svg>
+            <svg class="opinion__rate__star">
+              <use href="assets/icons/sprites.svg#star"></use>
+            </svg>
+            <svg class="opinion__rate__star">
+              <use href="assets/icons/sprites.svg#star"></use>
+            </svg>
+          </div>
+          <p class="visually-hidden">3/5</p>
+          <p class="opinion__rate__p">Was this opinion useful?</p>
+          <button class="opinion__rate__btn">
+            <span class="visually-hidden">useful</span>
+            <svg class="opinion__rate__like" aria-hidden="true">
+              <use href="assets/icons/sprites.svg#like"></use>
+            </svg>
+          </button>
+          <button class="opinion__rate__btn">
+            <span class="visually-hidden">dislike</span>
+            <svg class="opinion__rate__dislike" aria-hidden="true">
+              <use href="assets/icons/sprites.svg#dislike"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="opinion">
+        <figure class="opinion__customer">
+          <img loading="lazy" src="./assets/photos/person2.jpg" alt="old man"
+            class="opinion__customer__img">
+          <figcaption class="opinion__customer__name">Eric Pollock</figcaption>
+        </figure>
+        <div class="opinion__body">
+          <img src="./assets/icons/quote.png" alt=""
+            class="opinion__quote-mark">
+          <h3 class="opinion__title">Best holidays in my life</h3>
+          <p class="opinion__date">
+            Published at:
+            <time datetime="2021-01-01T10:00">2020.09.01
+              10:00</time>
+          </p>
+          <p class="opinion__content">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
+            reiciendis tenetur nobis, natus aut eaque nihil ratione. Magnam
+            beatae
+            eius saepe? Expedita facere dolore voluptas deleniti blanditiis quos
+            suscipit cupiditate.
+          </p>
+        </div>
+        <div class="opinion__rate">
+          <h4 class="opinion__rate__heading">rate</h4>
+          <div class="opinion__rate__star-group" aria-hidden="true">
+            <svg class="opinion__rate__star opinion__rate__star--filled">
+              <use href="assets/icons/sprites.svg#star"></use>
+            </svg>
+            <svg class="opinion__rate__star opinion__rate__star--filled">
+              <use href="assets/icons/sprites.svg#star"></use>
+            </svg>
+            <svg class="opinion__rate__star opinion__rate__star--filled">
+              <use href="assets/icons/sprites.svg#star"></use>
+            </svg>
+            <svg class="opinion__rate__star opinion__rate__star--filled">
+              <use href="assets/icons/sprites.svg#star"></use>
+            </svg>
+            <svg class="opinion__rate__star opinion__rate__star--filled">
+              <use href="assets/icons/sprites.svg#star"></use>
+            </svg>
+          </div>
+          <p class="visually-hidden">5/5</p>
+          <p class="opinion__rate__p">Was this opinion useful?</p>
+          <button class="opinion__rate__btn">
+            <span class="visually-hidden">useful</span>
+            <svg class="opinion__rate__like" aria-hidden="true">
+              <use href="assets/icons/sprites.svg#like"></use>
+            </svg>
+          </button>
+          <button class="opinion__rate__btn">
+            <span class="visually-hidden">dislike</span>
+            <svg class="opinion__rate__dislike" aria-hidden="true">
+              <use href="assets/icons/sprites.svg#dislike"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="opinion">
+        <figure class="opinion__customer">
+          <img loading="lazy" src="./assets/photos/person3.jpg"
+            alt="indian woman" class="opinion__customer__img">
+          <figcaption class="opinion__customer__name">Mia Walsh</figcaption>
+        </figure>
+        <div class="opinion__body">
+          <img src="./assets/icons/quote.png" alt=""
+            class="opinion__quote-mark">
+          <h3 class="opinion__title">Best holidays in my life</h3>
+          <p class="opinion__date">
+            Published at:
+            <time datetime="2021-01-01T10:00">2020.09.01
+              10:00</time>
+          </p>
+          <p class="opinion__content">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet
+            reiciendis tenetur nobis, natus aut eaque nihil ratione. Magnam
+            beatae
+            eius saepe? Expedita facere dolore voluptas deleniti blanditiis quos
+            suscipit cupiditate.
+          </p>
+        </div>
+        <div class="opinion__rate">
+          <h4 class="opinion__rate__heading">rate</h4>
+          <div class="opinion__rate__star-group" aria-hidden="true">
+            <svg class="opinion__rate__star opinion__rate__star--filled">
+              <use href="assets/icons/sprites.svg#star"></use>
+            </svg>
+            <svg class="opinion__rate__star opinion__rate__star--filled">
+              <use href="assets/icons/sprites.svg#star"></use>
+            </svg>
+            <svg class="opinion__rate__star opinion__rate__star--filled">
+              <use href="assets/icons/sprites.svg#star"></use>
+            </svg>
+            <svg class="opinion__rate__star opinion__rate__star--filled">
+              <use href="assets/icons/sprites.svg#star"></use>
+            </svg>
+            <svg class="opinion__rate__star">
+              <use href="assets/icons/sprites.svg#star"></use>
+            </svg>
+          </div>
+          <p class="visually-hidden">3/5</p>
+          <p class="opinion__rate__p">Was this opinion useful?</p>
+          <button class="opinion__rate__btn">
+            <span class="visually-hidden">useful</span>
+            <svg class="opinion__rate__like" aria-hidden="true">
+              <use href="assets/icons/sprites.svg#like"></use>
+            </svg>
+          </button>
+          <button class="opinion__rate__btn">
+            <span class="visually-hidden">dislike</span>
+            <svg class="opinion__rate__dislike" aria-hidden="true">
+              <use href="assets/icons/sprites.svg#dislike"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="section rooms" id="rooms">
+      <h2 class="section__heading">Rooms</h2>
+      <div class="room">
+        <div class="room-card">
+          <h3 class="room-card__title">Single room</h3>
+          <p class="room-card__desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            tenetur praesentium, molestiae quidem beatae, quibusdam, sint illo
+            magni.
+          </p>
+          <div class="room-card__icon-group">
+            <div class="room-card__icon-wrapper">
+              <img src="./assets/icons/wifi.svg" alt="" class="room-card__icon">
+              <p class="room-card__icon-name">
+                Wi-Fi
+              </p>
+            </div>
+            <div class="room-card__icon-wrapper">
+              <img src="./assets/icons/tv.svg" alt="" class="room-card__icon">
+              <p class="room-card__icon-name">
+                TV
+              </p>
+            </div>
+            <div class="room-card__icon-wrapper">
+              <img src="./assets/icons/bathroom.svg" alt=""
+                class="room-card__icon">
+              <p class="room-card__icon-name">
+                Bathroom
+              </p>
+            </div>
+          </div>
+          <p class="room-card__price">Price: $100 per day</p>
+        </div>
+        <img class="room__img"
+          alt="hotel room with white walls, air conditioning, large bed and armchair"
+          sizes="(max-width: 1200px) 100vw, 1200px" srcset="
+            ./assets/photos/room1_640.jpg 640w,
+            ./assets/photos/room1_988.jpg 988w,
+            ./assets/photos/room1_1200.jpg 1200w"
+          src="./assets/photos/room1_1200.jpg">
+      </div>
+      <div class="room">
+        <div class="room-card">
+          <h3 class="room-card__title">Double room</h3>
+          <p class="room-card__desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            tenetur praesentium, molestiae quidem beatae, quibusdam, sint illo
+            magni.
+          </p>
+          <div class="room-card__icon-group">
+            <div class="room-card__icon-wrapper">
+              <img src="./assets/icons/wifi.svg" alt="" class="room-card__icon">
+              <p class="room-card__icon-name">
+                Wi-Fi
+              </p>
+            </div>
+            <div class="room-card__icon-wrapper">
+              <img src="./assets/icons/bathroom.svg" alt=""
+                class="room-card__icon">
+              <p class="room-card__icon-name">
+                Bathroom
+              </p>
+            </div>
+            <div class="room-card__icon-wrapper">
+              <img src="./assets/icons/air-conditioning.svg" alt=""
+                class="room-card__icon">
+              <p class="room-card__icon-name">
+                Air conditioning
+              </p>
+            </div>
+            <div class="room-card__icon-wrapper">
+              <img src="./assets/icons/tv.svg" alt="" class="room-card__icon">
+              <p class="room-card__icon-name">
+                TV
+              </p>
+            </div>
+          </div>
+          <p class="room-card__price">Price: $200 per day</p>
+        </div>
+        <img class="room__img"
+          alt="hotel room with light walls double bed, armchair and balcony"
+          sizes="(max-width: 1200px) 100vw, 1200px" srcset="
+          ./assets/photos/room2_640.jpg 640w,
+          ./assets/photos/room2_995.jpg 995w,
+          ./assets/photos/room2_1200.jpg 1200w"
+          src="./assets/photos/room2_1200.jpg">
+      </div>
+      <div class="room">
+        <div class="room-card">
+          <h3 class="room-card__title">Quadruple room</h3>
+          <p class="room-card__desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            tenetur praesentium, molestiae quidem beatae, quibusdam, sint illo
+            magni.
+          </p>
+          <div class="room-card__icon-group">
+            <div class="room-card__icon-wrapper">
+              <img src="./assets/icons/wifi.svg" alt="" class="room-card__icon">
+              <p class="room-card__icon-name">
+                Wi-Fi
+              </p>
+            </div>
+            <div class="room-card__icon-wrapper">
+              <img src="./assets/icons/kitchen.svg" alt=""
+                class="room-card__icon">
+              <p class="room-card__icon-name">
+                Kitchen
+              </p>
+            </div>
+            <div class="room-card__icon-wrapper">
+              <img src="./assets/icons/tv.svg" alt="" class="room-card__icon">
+              <p class="room-card__icon-name">
+                TV
+              </p>
+            </div>
+            <div class="room-card__icon-wrapper">
+              <img src="./assets/icons/air-conditioning.svg" alt=""
+                class="room-card__icon">
+              <p class="room-card__icon-name">
+                Air conditioning
+              </p>
+            </div>
+            <div class="room-card__icon-wrapper">
+              <img src="./assets/icons/bathroom.svg" alt=""
+                class="room-card__icon">
+              <p class="room-card__icon-name">
+                Bathroom
+              </p>
+            </div>
+          </div>
+          <p class="room-card__price">Price: $400 per day</p>
+        </div>
+        <img class="room__img" alt="hotel room with large bed and brown walls"
+          sizes="(max-width: 1200px) 100vw, 1200px" srcset="
+          ./assets/photos/room3_640.jpg 640w,
+          ./assets/photos/room3_947.jpg 947w,
+          ./assets/photos/room3_1200.jpg 1200w"
+          src="./assets/photos/room3_1200.jpg">
+      </div>
+    </section>
+    <section class="contact section" id="contact">
+      <div class="forms-container">
+        <form class="contact__form">
+          <h3 class="contact__form__heading">Book a room</h3>
+          <label class="input-label" for="name">Name:
+            <input type="text" id="name" class="input input--large"
+              placeholder="Enter your name..." autocomplete="name" required>
+          </label>
+          <label class="input-label" for="email">Email:
+            <input type="email" id="email" class="input input--large"
+              placeholder="Enter your email..." autocomplete="email" required>
+          </label>
+          <label class="input-label" for="book-room__arrival-date">
+            Arrival date
+            <input type="date" id="book-room__arrival-date"
+              class="input input--large" required>
+          </label>
+          <div class="contact__form__subcontainer">
+            <label class="input-label" for="book-room__guests-number">Guests:
+              <select id="book-room__guests-number" class="input input--small">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </label>
+            <label class="input-label" for="book-room__days">Days:
+              <input type="number" id="book-room__days"
+                class="input input--small" value="7" min="1" max="30">
+            </label>
+          </div>
+          <label class="input-label" for="book-room__message">Message:
+            <textarea id="book-room__message"
+              class="input input--textarea input--large"
+              placeholder="Enter your message..."></textarea>
+          </label>
+          <button type="submit" class="btn">Book</button>
+        </form>
+        <div>
+          <form class="contact__form contact__form--last">
+            <h3 class="contact__form__heading">Ask a question</h3>
+            <label class="input-label" for="contact-form__name">Name:
+              <input type="text" id="contact-form__name"
+                class="input input--large" placeholder="Enter your name..."
+                autocomplete="name" required>
+            </label>
+            <label class="input-label" for="contact-form__email">Email:
+              <input type="email" id="contact-form__email"
+                class="input input--large" placeholder="Enter your email..."
+                autocomplete="email" required>
+            </label>
+            <label class="input-label" for="contact-form__message">Message:
+              <textarea id="contact-form__message"
+                class="input input--textarea input--large"
+                placeholder="Enter your message..." required></textarea>
+            </label>
+            <button type="submit" class="btn">Send</button>
+          </form>
+          <div class="contact__info">
+            <div class="contact__socials">
+              <a href="https://facebook.com/" class="contact__socials__link"
+                aria-label="Go to facebook page">
+                <svg class="contact__socials__icon" aria-hidden="true">
+                  <use href="assets/icons/sprites.svg#facebook"></use>
+                </svg>
+              </a>
+              <a href="https://airbnb.com/" class="contact__socials__link"
+                aria-label="Go to airbnb page">
+                <svg class="contact__socials__icon" aria-hidden="true">
+                  <use href="assets/icons/sprites.svg#airbnb"></use>
+                </svg>
+              </a>
+              <a href="https://instagram.com/" class="contact__socials__link"
+                aria-label="Go to instagram page">
+                <svg class="contact__socials__icon" aria-hidden="true">
+                  <use href="assets/icons/sprites.svg#instagram"></use>
+                </svg>
+              </a>
+            </div>
+            <address class="contact__address">
+              <span>Some street 8.</span>
+              <span>6370 Kitzbühel</span>
+              <a class="contact__address__link" href="tel:+41123123123">+41
+                123-123-123</a>
+              <a class="contact__address__link"
+                href="mailto:some.mail@mail.com">some.mail@mail.com</a>
+            </address>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <span>@2021</span>
+    <a href="https://github.com/0dominik" class="footer__link">
+      <img src="./assets/icons/github.svg" alt="github" class="footer__icon">
+      /0dominik
+    </a>
+    <a href="#" class="scroll-to-top">
+      <span class="visually-hidden">Scroll to top</span>
+      <svg class="scroll-to-top__icon" aria-hidden="true">
+        <use href="assets/icons/sprites.svg#scroll-to-top"></use>
+      </svg>
+    </a>
+  </footer>
+</body>
+
+</html>

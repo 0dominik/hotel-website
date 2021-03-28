@@ -1,0 +1,51 @@
+@use './colors' as c;
+@use './breakpoints' as b;
+
+@mixin flex($jc, $ai, $dir: row) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $dir;
+}
+
+@mixin mq($size, $type: max-width) {
+  @media ($type: map-get(b.$breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin shadow {
+  box-shadow: 0px 1px 4px 0px c.$gray;
+}
+
+@mixin heading-decoration {
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: c.$accent;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 20px);
+  }
+
+  &:before {
+    left: calc(100% + 20px);
+    right: auto;
+  }
+}
+
+@mixin focus {
+  border: 3px dashed transparent;
+  padding: 3px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    border: 3px dashed c.$accent;
+  }
+}

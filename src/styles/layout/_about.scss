@@ -1,0 +1,52 @@
+@use '../abstracts/colors' as c;
+@use '../abstracts/fonts' as f;
+@use '../abstracts/mixins' as m;
+
+.about-item {
+  @include m.flex(auto, center, column);
+
+  + .about-item {
+    margin-top: 60px;
+  }
+
+  &__heading {
+    font-size: f.$subheading-size;
+    text-align: center;
+    margin-bottom: 25px;
+    @include m.heading-decoration();
+  }
+
+  &__img {
+    height: 210px;
+    width: 350px;
+    object-fit: cover;
+  }
+
+  &__subcontainer {
+    @include m.flex(flex-start, center);
+    gap: 30px;
+  }
+
+  &__desc {
+    text-align: justify;
+    max-width: 75ch;
+  }
+
+  &:nth-child(odd) {
+    .about-item__subcontainer {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @include m.mq('small') {
+    &__subcontainer,
+    &:nth-child(odd) .about-item__subcontainer {
+      flex-direction: column;
+    }
+
+    &__img {
+      max-height: none;
+      width: 100%;
+    }
+  }
+}

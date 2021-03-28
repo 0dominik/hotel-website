@@ -1,0 +1,134 @@
+@use '../abstracts/colors' as c;
+@use '../abstracts/fonts' as f;
+@use '../abstracts/mixins' as m;
+@use '../abstracts/z-index' as z;
+
+.gallery {
+  @include m.flex(center, center);
+  flex-wrap: wrap;
+  max-width: 1200px;
+  gap: 20px;
+
+  &__item {
+    position: relative;
+    width: 320px;
+    height: 213px;
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__enlarge-icon {
+    width: 50px;
+    fill: c.$white;
+  }
+
+  &__enlarge-btn {
+    position: absolute;
+    background-color: rgba(c.$black, 50%);
+    opacity: 0;
+    transition: 0.15s;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    outline: 3px outset c.$dark-gray;
+    outline-offset: 10px;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+      outline-offset: 0;
+      outline-color: c.$accent;
+    }
+  }
+
+  @include m.mq('small') {
+    gap: 5px;
+
+    &__item {
+      width: 100%;
+      height: auto;
+    }
+
+    &__enlarge-btn {
+      display: none;
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  top: 0;
+  z-index: z.$top;
+  @include m.flex(center, center, column);
+  transition: 0.2s ease-out;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+
+  &.open {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+
+    .modal__img {
+      transform: scale(1);
+    }
+  }
+
+  &__subcontainer {
+    @include m.flex(center, center);
+    max-height: 90%;
+    width: calc(100% - 90px);
+    max-width: 1100px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    transform: scale(0.5);
+    transition: 0.3s;
+  }
+
+  &__caption {
+    color: c.$white;
+    margin-top: 15px;
+  }
+
+  &__prev,
+  &__next,
+  &__close {
+    font-size: 6rem;
+    color: c.$white;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    @include m.flex(center, center);
+    @include m.focus();
+  }
+
+  &__icon {
+    pointer-events: none;
+  }
+
+  &__close {
+    font-size: 3.6rem;
+    width: 40px;
+    height: 40px;
+    background-color: c.$black;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+  }
+
+  @include m.mq('small') {
+    display: none;
+  }
+}

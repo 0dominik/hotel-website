@@ -1,0 +1,132 @@
+@use '../abstracts/colors' as c;
+@use '../abstracts/fonts' as f;
+@use '../abstracts/mixins' as m;
+
+.opinion {
+  @include m.flex(center, center);
+  @include m.shadow;
+  background-color: c.$white;
+  padding: 20px 30px;
+  border-radius: 25px;
+  border: 2px solid c.$accent;
+
+  + .opinion {
+    margin-top: 25px;
+  }
+
+  &__customer {
+    text-align: center;
+
+    &__img {
+      width: 100px;
+      border-radius: 100%;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__title {
+    font-size: f.$subheading-size;
+    font-weight: f.$medium;
+  }
+
+  &__date {
+    color: c.$dark-gray;
+    margin: 5px 0;
+    font-size: 1.4rem;
+  }
+
+  &__body {
+    @include m.flex(center, flex-start, column);
+    max-width: 60ch;
+    position: relative;
+    margin-left: 25px;
+    margin-right: 35px;
+
+    &:after {
+      content: '';
+      height: 100%;
+      width: 2px;
+      background-color: c.$accent;
+      display: block;
+      position: absolute;
+      right: -15px;
+    }
+  }
+
+  &__quote-mark {
+    width: 40px;
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    opacity: 0.3;
+  }
+
+  &__rate {
+    text-align: center;
+    min-width: 100px;
+
+    &__heading {
+      text-transform: uppercase;
+      font-size: 1.6rem;
+    }
+
+    &__star {
+      fill: c.$gray;
+      width: 15px;
+      height: 15px;
+
+      &--filled {
+        fill: c.$yellow;
+      }
+    }
+
+    &__like,
+    &__dislike {
+      width: 30px;
+      height: 30px;
+      transition: 0.15s;
+    }
+
+    &__btn {
+      background-color: transparent;
+      @include m.focus();
+
+      &:hover,
+      &:focus {
+        .opinion__rate__dislike {
+          fill: c.$red;
+        }
+
+        .opinion__rate__like {
+          fill: c.$accent;
+        }
+      }
+    }
+
+    &__p {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+
+  @include m.mq(small) {
+    flex-direction: column;
+
+    &__body {
+      margin: 0;
+      align-items: center;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &__quote-mark {
+      display: none;
+    }
+
+    &__rate {
+      margin-top: 15px;
+    }
+  }
+}
