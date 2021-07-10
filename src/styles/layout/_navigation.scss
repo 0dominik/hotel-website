@@ -1,4 +1,3 @@
-@use '../abstracts/colors' as c;
 @use '../abstracts/fonts' as f;
 @use '../abstracts/mixins' as m;
 @use '../abstracts/z-index' as z;
@@ -15,16 +14,16 @@
 
   &.scrolled {
     height: 55px;
-    background-color: c.$black;
-    box-shadow: 0 0 3px 1px c.$black;
+    background-color: var(--black);
+    box-shadow: 0 0 3px 1px var(--black);
   }
 
   @include m.mq('medium', max-width) {
-    background-color: c.$black;
+    background-color: var(--black);
     flex-direction: column;
     height: auto;
     padding: 5px;
-    box-shadow: 0 0 3px 1px c.$black;
+    box-shadow: 0 0 3px 1px var(--black);
 
     &.scrolled {
       height: auto;
@@ -34,7 +33,7 @@
 
 .logo {
   font-size: 2.4rem;
-  color: c.$white;
+  color: var(--white);
   text-decoration: none;
   display: flex;
   @include m.focus();
@@ -64,7 +63,8 @@
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: c.$white;
+      padding: 2px;
+      color: var(--white);
       font-weight: f.$light;
       @include m.focus();
 
@@ -74,7 +74,7 @@
         width: calc(100% - 6px);
         height: 3px;
         position: absolute;
-        background-color: c.$accent;
+        background-color: var(--accent);
         bottom: -20px;
         opacity: 0;
         pointer-events: none;
@@ -112,7 +112,7 @@
 
     &.expanded {
       padding: 10px 0;
-      height: 285px;
+      height: 340px;
       visibility: visible;
     }
   }
@@ -137,7 +137,7 @@
     content: '';
     width: 100%;
     height: 3px;
-    background-color: c.$white;
+    background-color: var(--white);
     transition: 0.15s;
     pointer-events: none;
   }
@@ -158,5 +158,37 @@
 
   @include m.mq('medium', min-width) {
     display: none;
+  }
+}
+
+.toggle-theme {
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  line-height: 100%;
+  @include m.focus();
+  border: 2px solid var(--white);
+  transition: 0.2s;
+
+  &:hover,
+  &:focus {
+    background-color: var(--white);
+    color: var(--white);
+
+    .toggle-theme__icon {
+      fill: var(--black);
+    }
+  }
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+    fill: var(--white);
+
+    &.inactive {
+      display: none;
+    }
   }
 }

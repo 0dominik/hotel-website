@@ -1,4 +1,3 @@
-@use '../abstracts/colors' as c;
 @use '../abstracts/fonts' as f;
 @use '../abstracts/mixins' as m;
 
@@ -9,8 +8,8 @@
   padding: 0 10px;
   font-size: f.$font-size;
   margin-top: 5px;
-  border: 3px solid c.$white;
-  background-color: c.$white;
+  border: 3px solid var(--white);
+  background-color: var(--white);
 
   &--large {
     width: 225px;
@@ -36,15 +35,15 @@
 
     &::-webkit-scrollbar-thumb {
       border-radius: 10px;
-      background-color: c.$accent;
+      background-color: var(--accent);
       box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
     }
   }
 
   &:focus {
     outline: none;
-    border: 3px dashed c.$accent;
-    background-color: c.$light-gray;
+    border: 3px dashed var(--accent);
+    background-color: var(--light-gray);
   }
 }
 

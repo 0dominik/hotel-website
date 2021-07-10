@@ -1,5 +1,4 @@
 @use '../abstracts/fonts' as f;
-@use '../abstracts/colors' as c;
 
 *,
 *:before,
@@ -17,7 +16,8 @@ html {
 }
 
 body {
-  background: c.$white;
+  background-color: var(--background);
+  color: var(--font);
   font-size: f.$font-size;
   height: 100%;
 }

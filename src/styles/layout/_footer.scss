@@ -1,13 +1,12 @@
-@use '../abstracts/colors' as c;
 @use '../abstracts/fonts' as f;
 @use '../abstracts/mixins' as m;
 
 .footer {
   @include m.flex(center, center);
-  background-color: c.$black;
+  background-color: var(--black);
   padding: 10px;
   position: relative;
-  color: c.$white;
+  color: var(--white);
 
   &__icon {
     width: 30px;
@@ -15,7 +14,7 @@
   }
 
   &__link {
-    color: c.$white;
+    color: var(--white);
     text-decoration: none;
     margin: 0 10px;
     @include m.flex(center, center);
@@ -32,7 +31,7 @@
   height: 45px;
   border-radius: 100%;
   @include m.focus();
-  border: 3px solid c.$white;
+  border: 3px solid var(--white);
   cursor: pointer;
   position: absolute;
   right: 25px;
@@ -42,12 +41,12 @@
   text-align: center;
 
   &:hover {
-    background-color: rgba(c.$dark-gray, 50%);
+    background-color: rgba(var(--dark-gray), 50%);
   }
 
   &__icon {
     width: 70%;
     height: 70%;
-    fill: c.$white;
+    fill: var(--white);
   }
 }

@@ -1,4 +1,3 @@
-@use '../abstracts/colors' as c;
 @use '../abstracts/mixins' as m;
 @use '../abstracts/fonts' as f;
 
@@ -7,17 +6,17 @@
   min-height: 40px;
   background-color: transparent;
   border-radius: 50px;
-  color: c.$white;
+  color: var(--white);
   font-size: f.$font-size;
   cursor: pointer;
   transition: 0.15s;
   @include m.focus();
-  border: 3px solid c.$white;
+  border: 3px solid var(--white);
   padding: 5px 20px;
 
   &:hover,
   &:focus {
-    background-color: c.$white;
-    color: c.$black;
+    background-color: var(--white);
+    color: var(--black);
   }
 }

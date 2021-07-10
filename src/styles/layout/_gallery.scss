@@ -1,4 +1,3 @@
-@use '../abstracts/colors' as c;
 @use '../abstracts/fonts' as f;
 @use '../abstracts/mixins' as m;
 @use '../abstracts/z-index' as z;
@@ -23,26 +22,26 @@
 
   &__enlarge-icon {
     width: 50px;
-    fill: c.$white;
+    fill: var(--white);
   }
 
   &__enlarge-btn {
     position: absolute;
-    background-color: rgba(c.$black, 50%);
+    background-color: rgba(var(--black), 50%);
     opacity: 0;
     transition: 0.15s;
     font-size: 2rem;
     cursor: pointer;
     width: 100%;
     height: 100%;
-    outline: 3px outset c.$dark-gray;
+    outline: 3px outset var(--dark-gray);
     outline-offset: 10px;
 
     &:hover,
     &:focus {
       opacity: 1;
       outline-offset: 0;
-      outline-color: c.$accent;
+      outline-color: var(--accent);
     }
   }
 
@@ -98,7 +97,7 @@
   }
 
   &__caption {
-    color: c.$white;
+    color: var(--white);
     margin-top: 15px;
   }
 
@@ -106,7 +105,7 @@
   &__next,
   &__close {
     font-size: 6rem;
-    color: c.$white;
+    color: var(--white);
     background-color: transparent;
     border: 0;
     cursor: pointer;
@@ -122,7 +121,7 @@
     font-size: 3.6rem;
     width: 40px;
     height: 40px;
-    background-color: c.$black;
+    background-color: var(--black);
     position: absolute;
     top: 15px;
     right: 25px;

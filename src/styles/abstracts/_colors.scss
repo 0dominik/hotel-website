@@ -1,8 +1,25 @@
-$accent: #4dbd24;
-$white: #ffffff;
-$black: #000000;
-$light-gray: #f5f5f5;
-$gray: #c4c4c4;
-$dark-gray: #858585;
-$yellow: #ffd700;
-$red: #db1a1a;
+body {
+  --background: #ffffff;
+  --dark-background: #f5f5f5;
+  --font: #000000;
+  --white: #ffffff;
+  --black: #000000;
+  --accent: #4dbd24;
+  --light-gray: #f5f5f5;
+  --dark-gray: #858585;
+  --gray: #c4c4c4;
+  --yellow: #ffd700;
+  --red: #db1a1a;
+  --hero-opacity: 0;
+}
+
+body.dark-theme {
+  --background: #0a0a0a;
+  --dark-background: #202020;
+  --font: #e4e4e4;
+  --white: #e4e4e4;
+  --black: #000000;
+  --accent: #2a9b01;
+  --light-gray: #dddddd;
+  --hero-opacity: 0.2;
+}

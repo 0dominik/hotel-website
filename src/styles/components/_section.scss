@@ -1,4 +1,3 @@
-@use '../abstracts/colors' as c;
 @use '../abstracts/fonts' as f;
 @use '../abstracts/mixins' as m;
 @use '../abstracts/z-index' as z;
@@ -8,7 +7,7 @@
   padding: 75px 10px;
 
   &:nth-child(even) {
-    background-color: c.$light-gray;
+    background-color: var(--dark-background);
   }
 
   &__heading {
@@ -24,7 +23,7 @@
       height: 50%;
       display: block;
       left: 0;
-      background-color: c.$accent;
+      background-color: var(--accent);
       position: absolute;
       z-index: -1;
       left: -10px;

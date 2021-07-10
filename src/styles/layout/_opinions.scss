@@ -1,14 +1,12 @@
-@use '../abstracts/colors' as c;
 @use '../abstracts/fonts' as f;
 @use '../abstracts/mixins' as m;
 
 .opinion {
   @include m.flex(center, center);
-  @include m.shadow;
-  background-color: c.$white;
+  background-color: var(--background);
   padding: 20px 30px;
   border-radius: 25px;
-  border: 2px solid c.$accent;
+  border: 2px solid var(--accent);
 
   + .opinion {
     margin-top: 25px;
@@ -30,7 +28,7 @@
   }
 
   &__date {
-    color: c.$dark-gray;
+    color: var(--dark-gray);
     margin: 5px 0;
     font-size: 1.4rem;
   }
@@ -46,7 +44,7 @@
       content: '';
       height: 100%;
       width: 2px;
-      background-color: c.$accent;
+      background-color: var(--accent);
       display: block;
       position: absolute;
       right: -15px;
@@ -62,6 +60,7 @@
   }
 
   &__rate {
+    fill: var(--font);
     text-align: center;
     min-width: 100px;
 
@@ -71,12 +70,12 @@
     }
 
     &__star {
-      fill: c.$gray;
+      fill: var(--gray);
       width: 15px;
       height: 15px;
 
       &--filled {
-        fill: c.$yellow;
+        fill: var(--yellow);
       }
     }
 
@@ -94,11 +93,11 @@
       &:hover,
       &:focus {
         .opinion__rate__dislike {
-          fill: c.$red;
+          fill: var(--red);
         }
 
         .opinion__rate__like {
-          fill: c.$accent;
+          fill: var(--accent);
         }
       }
     }

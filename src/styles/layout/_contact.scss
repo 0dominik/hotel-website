@@ -1,16 +1,15 @@
-@use '../abstracts/colors' as c;
 @use '../abstracts/fonts' as f;
 @use '../abstracts/mixins' as m;
 
 .contact {
   background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('../assets/photos/footer_1920.jpg');
   background-size: cover;
-  color: c.$white;
+  color: var(--white);
   display: flex;
 
   @include m.mq('small') {
     &#{&} {
-      background: rgba(c.$black, 0.85);
+      background: rgba(var(--black), 0.85);
     }
 
     &__form {
@@ -52,7 +51,7 @@
     height: 45px;
     border: 3px dashed transparent;
     padding: 3px;
-    fill: c.$white;
+    fill: var(--white);
   }
 
   &__link {
@@ -69,14 +68,14 @@
 
     &:hover {
       &:after {
-        background-color: c.$white;
+        background-color: var(--white);
         margin-top: -3px;
       }
     }
 
     &:focus .socials__icon {
       outline: none;
-      border: 3px dashed c.$accent;
+      border: 3px dashed var(--accent);
     }
   }
 }
@@ -86,7 +85,7 @@
 
   &__link {
     @include m.focus();
-    color: c.$white;
+    color: var(--white);
     margin: -3px;
     padding: 0px;
   }

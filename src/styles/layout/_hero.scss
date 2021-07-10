@@ -1,15 +1,14 @@
-@use '../abstracts/colors' as c;
 @use '../abstracts/fonts' as f;
 @use '../abstracts/mixins' as m;
 
 .hero {
   width: 100%;
   height: 100%;
-  background-image: url('../assets/photos/header_1920.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, calc(var(--hero-opacity) + 0.35)), rgba(0, 0, 0, var(--hero-opacity))), url('../assets/photos/header_1920.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position-y: 50%;
-  color: c.$white;
+  color: var(--white);
   @include m.flex(auto, center, column);
 
   &__heading {
@@ -32,7 +31,7 @@
         content: '';
         width: 150px;
         height: 4px;
-        background-color: c.$white;
+        background-color: var(--white);
         display: block;
         position: absolute;
         top: -30px;
