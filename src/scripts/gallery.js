@@ -1,6 +1,6 @@
 const modal = document.querySelector('.modal');
 const modalImg = document.querySelector('.modal__img');
-const enlargeBtn = document.querySelectorAll('.gallery__enlarge-btn');
+const enlargeBtns = document.querySelectorAll('.gallery__enlarge-btn');
 const images = document.querySelectorAll('.gallery__img');
 const caption = document.querySelector('.modal__caption');
 const prevBtn = document.querySelector('.modal__prev');
@@ -15,7 +15,7 @@ const setModal = (previewImg, targetImg, targetCaption) => {
   targetCaption.textContent = alt;
 };
 
-enlargeBtn.forEach((btn, i) => {
+enlargeBtns.forEach((btn, i) => {
   btn.addEventListener('click', () => {
     modal.classList.add('open');
     setModal(btn.nextElementSibling, modalImg, caption);
