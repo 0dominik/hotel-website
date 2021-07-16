@@ -39,9 +39,10 @@
   transform: translateY(-50%);
   line-height: 45px;
   text-align: center;
+  transition: 0.1s;
 
   &:hover {
-    background-color: rgba(var(--dark-gray), 50%);
+    background-color: var(--dark-gray);
   }
 
   &__icon {

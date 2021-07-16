@@ -9,7 +9,7 @@
 
   @include m.mq('small') {
     &#{&} {
-      background: rgba(var(--black), 0.85);
+      background: #202020;
     }
 
     &__form {
